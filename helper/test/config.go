@@ -11,12 +11,12 @@ import (
 type TestConfigKey int
 
 const (
-	TestConfigSomeKey TestConfigKey = iota
+	TestConfigHSendgridAPIKey TestConfigKey = iota
 	TestConfigAcceptanceTestKey
 )
 
 var testConfigKeyToEnvName = map[TestConfigKey]string{
-	TestConfigSomeKey:           "SOME_KEY",
+	TestConfigHSendgridAPIKey:   "SENDGRID_API_KEY",
 	TestConfigAcceptanceTestKey: resource.TestEnvVar,
 }
 
