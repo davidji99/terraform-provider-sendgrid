@@ -41,4 +41,4 @@ jobs:
       - name: Run make test
         run: make testacc TEST="./sendgrid/"
         env:
-          SENDGRID_API_KEY: {{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
