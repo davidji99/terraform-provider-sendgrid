@@ -1,4 +1,4 @@
-module github.com/davidji99/terraform-provider-herokux/tools
+module github.com/davidji99/terraform-provider-sendgrid/tools
 
 go 1.15
 

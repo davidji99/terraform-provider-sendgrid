@@ -1,7 +1,8 @@
-Terraform Provider <REPLACE_ME>
+Terraform Provider Sendgrid
 =========================
 
-Some general information about this provider.
+The Sendgrid provider is used to interact with the resources provided by [Sendgrid V3 API](https://sendgrid.com/docs/api-reference/)
+and needs to be configured with credentials before it can be used.
 
 Requirements
 ------------
@@ -13,7 +14,7 @@ Usage
 -----
 
 ```hcl
-provider "<REPLACE_ME>" {
+provider "sendgrid" {
   version = "~> 0.1.0"
 }
 ```
@@ -32,7 +33,7 @@ To compile the provider, run `make build`. This will build the provider and put 
 ```shell script
 $ make build
 ...
-$ $GOPATH/bin/terraform-provider-<REPLACE_ME>
+$ $GOPATH/bin/terraform-provider-sendgrid
 ...
 ```
 
@@ -41,13 +42,13 @@ $ $GOPATH/bin/terraform-provider-<REPLACE_ME>
 To use the dev provider with local Terraform, copy the freshly built plugin into Terraform's local plugins directory:
 
 ```sh
-cp $GOPATH/bin/terraform-provider-<REPLACE_ME> ~/.terraform.d/plugins/
+cp $GOPATH/bin/terraform-provider-sendgrid ~/.terraform.d/plugins/
 ```
 
-Set the <REPLACE_ME> provider without a version constraint:
+Set the sendgrid provider without a version constraint:
 
 ```hcl
-provider "<REPLACE_ME>" {}
+provider "sendgrid" {}
 ```
 
 Then, initialize Terraform:
