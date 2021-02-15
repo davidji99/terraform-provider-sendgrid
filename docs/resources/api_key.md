@@ -11,8 +11,9 @@ Provides the ability to manage Sendgrid API keys.
 This resource provides the ability to manage [Sendgrid API keys](https://sendgrid.com/docs/ui/account-and-settings/api-keys).
 
 -> **IMPORTANT!**
-Please be advised that this resource will destroy the container (or dyno) on the application
-if it is removed from a configuration.
+Please be very careful when deleting this resource as any deleted API keys are NOT recoverable and invalidated immediately.
+Furthermore, this resource renders the `key` attribute in plain-text in your state file.
+Please ensure that your state file is properly secured and encrypted at rest.
 
 ## Example Usage
 
