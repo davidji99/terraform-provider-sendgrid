@@ -39,4 +39,4 @@ jobs:
         run: make build
 
       - name: Run make test
-        run: make testacc TEST="./<REPLACE_ME>/"
+        run: make testacc TEST="./sendgrid/"
