@@ -5,7 +5,7 @@ jobs:
   test:
     strategy:
       matrix:
-        go-version: [1.14.x, 1.15.x]
+        go-version: [1.15.x]
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     
@@ -41,4 +41,4 @@ jobs:
       - name: Run make test
         run: make testacc TEST="./sendgrid/"
         env:
-          SENDGRID_API_KEY: {{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}

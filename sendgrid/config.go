@@ -3,8 +3,13 @@ package sendgrid
 import (
 	"fmt"
 	"github.com/davidji99/terraform-provider-sendgrid/api"
+	"github.com/davidji99/terraform-provider-sendgrid/version"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"log"
+)
+
+var (
+	UserAgent = fmt.Sprintf("terraform-provider-sendgrid/v%s", version.ProviderVersion)
 )
 
 type Config struct {
@@ -20,7 +25,9 @@ func NewConfig() *Config {
 }
 
 func (c *Config) initializeAPI() error {
-	api, clientInitErr := api.New(api.APIKey(c.apiKey), api.APIv3BaseURL(c.apiv3BaseURL))
+	api, clientInitErr := api.New(api.APIKey(c.apiKey),
+		api.APIv3BaseURL(c.apiv3BaseURL), api.UserAgent(UserAgent),
+		api.CustomHTTPHeaders(c.Headers))
 	if clientInitErr != nil {
 		return clientInitErr
 	}
