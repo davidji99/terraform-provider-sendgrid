@@ -6,7 +6,7 @@ description: |-
 Provides the ability to manage Sendgrid API keys.
 ---
 
-# sendgrid\_app\_container\_release
+# sendgrid\_api\_key
 
 This resource provides the ability to manage [Sendgrid API keys](https://sendgrid.com/docs/ui/account-and-settings/api-keys).
 
