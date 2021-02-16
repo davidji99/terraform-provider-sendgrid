@@ -35,6 +35,14 @@ func CustomHTTPHeaders(headers map[string]string) Option {
 	}
 }
 
+// OnBehalfOfHeader allows for setting the on-behalf-of header.
+func OnBehalfOfHeader(h string) Option {
+	return func(c *Config) error {
+		c.OnBehalfOfHeader = h
+		return nil
+	}
+}
+
 // APIKey sets the API key for authentication.
 func APIKey(token string) Option {
 	return func(c *Config) error {
