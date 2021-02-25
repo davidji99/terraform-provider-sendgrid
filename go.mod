@@ -1,6 +1,6 @@
 module github.com/davidji99/terraform-provider-sendgrid
 
-go 1.14
+go 1.16
 
 require (
 	github.com/davidji99/simpleresty v0.2.3
