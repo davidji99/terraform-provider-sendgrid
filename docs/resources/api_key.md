@@ -3,7 +3,7 @@ layout: "sendgrid"
 page_title: "HerokuX: sendgrid_api_key"
 sidebar_current: "docs-sendgrid-resource-api-key"
 description: |-
-Provides the ability to manage Sendgrid API keys.
+    Provides the ability to manage Sendgrid API keys.
 ---
 
 # sendgrid\_api\_key

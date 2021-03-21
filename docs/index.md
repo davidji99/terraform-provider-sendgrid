@@ -71,5 +71,5 @@ The following arguments are supported:
 * `api_key` - (Required) Sendgrid API key. It must be provided, but it can also
   be sourced from [other locations](#Authentication).
 
-* `base_url` - (Optional) Custom APIv3 URL.
+* `base_url` - (Optional) Custom API URL.
   Can also be sourced from the `SENDGRID_API_URL` environment variable.
