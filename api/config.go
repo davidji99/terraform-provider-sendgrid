@@ -17,6 +17,9 @@ type Config struct {
 	// AcceptHeader
 	AcceptHeader string
 
+	// OnBehalfOfHeader
+	OnBehalfOfHeader string
+
 	// APIKey
 	APIKey string
 }

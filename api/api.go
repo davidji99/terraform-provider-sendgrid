@@ -44,6 +44,7 @@ func New(opts ...Option) (*Client, error) {
 		ContentTypeHeader: DefaultContentTypeHeader,
 		AcceptHeader:      "application/json",
 		APIKey:            "",
+		OnBehalfOfHeader:  "",
 	}
 
 	// Define any user custom Client settings
@@ -78,6 +79,10 @@ func (c *Client) setHeaders() {
 		SetHeader("Authorization", fmt.Sprintf("Bearer %s", c.config.APIKey)).
 		SetTimeout(2 * time.Minute).
 		SetAllowGetMethodPayload(true)
+
+	if c.config.OnBehalfOfHeader != "" {
+		c.http.SetHeader("on-behalf-of", c.config.OnBehalfOfHeader)
+	}
 
 	// Set additional headers
 	if c.config.CustomHTTPHeaders != nil {
